@@ -13,6 +13,28 @@ public class LibroCalificaciones {
         this.calificaciones = calificaciones;
     }
 
+    public LibroCalificaciones() {
+    }
+    
+    
+    public String getNombreDelCurso() {
+        return nombreDelCurso;
+    }
+
+    public void setNombreDelCurso(String nombreDelCurso) {
+        this.nombreDelCurso = nombreDelCurso;
+    }
+
+    public int[][] getCalificaciones() {
+        return calificaciones;
+    }
+
+    public void setCalificaciones(int[][] calificaciones) {
+        this.calificaciones = calificaciones;
+    }
+    
+    
+   
  
 
     
