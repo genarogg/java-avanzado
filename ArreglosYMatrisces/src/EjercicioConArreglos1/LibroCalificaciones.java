@@ -33,6 +33,21 @@ public class LibroCalificaciones {
         this.calificaciones = calificaciones;
     }
     
+    public void procesarCalificaciones(){
+        //imprime el arreglo de calificaciones
+        imprimirCalificaciones();
+        
+        //llamada a los metodos obtener minima y maxima calificacion
+        System.out.printf("%n%s %d%n%s %d",
+                          "La calificacion mas baja en el libro de calificaciones es:",
+                           obtenerNotaMinima(),
+                           "La calificacion mas alta en el libro de calificaciones es:",
+                           obtenerNotaMaxima());
+        System.out.println("");
+        
+        //imprime grafico de distribucion de todas las calificaciones para todas ls pruebas
+        imprimirGraficoDeBarras();
+    }
     
    
  
