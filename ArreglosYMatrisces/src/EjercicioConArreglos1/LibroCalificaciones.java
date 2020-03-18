@@ -49,7 +49,21 @@ public class LibroCalificaciones {
         imprimirGraficoDeBarras();
     }
     
-   
+    public int obtenerNotaMinima(){
+        //asuma que el primer elemento de arreglo calificaciones es el mas bajo
+        int calificacionBaja = calificaciones[0][0];
+        
+        //itera a traves de las filas del arreglo calificaciones
+        for (int[] calificacionesDeEstudiantes : calificaciones) {
+            //si la calificacion es mayor que calificacion baja, la asigna a calificacion baja
+            for(int calificacion : calificacionesDeEstudiantes){
+                if(calificacion < calificacionBaja){
+                    calificacionBaja = calificacion;
+                }
+            }
+        }
+        return calificacionBaja;
+    }
  
 
     
