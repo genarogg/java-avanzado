@@ -64,7 +64,22 @@ public class LibroCalificaciones {
         }
         return calificacionBaja;
     }
- 
+    public int obtenerNotaMaxima(){
+        //asuma que el primer elemento del arreglo calificaciones es el mas alto
+        int calificacionAlta = calificaciones[0][0];
+        
+        //itera a traves de las filas del arreglo calificaciones
+        for(int[]califEstudiantes : calificaciones){
+            //itera a traves de las columnas de la fila actual
+            for(int calificacion : califEstudiantes){
+                //si la calificacion es mayor que caliAlta, la asigna a caliAlta
+                if(calificacion > calificacionAlta){
+                    calificacionAlta = calificacion;
+                }
+            }
+        }
+        return calificacionAlta;
+    }
 
     
    
