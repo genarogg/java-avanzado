@@ -92,7 +92,17 @@ public class LibroCalificaciones {
         System.out.println("Promedio");//encabezado de columna de promedio de estudiantes
         
        //crea filas/columnas de texto que representen el arreglo de calificaciones
-      
+       for(int estudiantes = 0; estudiantes < calificaciones.length; estudiantes++){
+           System.out.printf("estudiante | %2d |", estudiantes + 1);
+           
+           for(int prueba : calificaciones[estudiantes]){ //Imprime calificaciones de estudiantes
+               System.out.printf("%10d |", prueba);
+           }
+           //llama al metodo obtenerPromedio para calcular la calificacion promedio del estudiante
+           //pasa fila de calificaciones como argumento para obtener promedio
+           double promedio = obtenerPromedio(calificaciones[estudiantes]);
+           System.out.printf("%9.2f%n", promedio);
+       }
        
     }
     
