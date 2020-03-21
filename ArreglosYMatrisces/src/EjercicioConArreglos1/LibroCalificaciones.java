@@ -130,7 +130,22 @@ public class LibroCalificaciones {
                 ++frecuencia[calificaciones /10];
             }
         }
-       
+        //para cada frecuencia de calificacines, imprime una barra en el grafico
+        for(int cuenta = 0; cuenta < frecuencia.length; cuenta++){
+            if(cuenta == 10){
+                System.out.printf("%5d: ", 100);
+            }
+            else{
+                System.out.printf("%02d-%02d: ", cuenta * 10, cuenta * 10 + 9);
+            }
+            
+            //Imprime barra de asteriscos
+            for(int estrellas = 0; estrellas < frecuencia[cuenta]; estrellas++){
+                System.out.print("*");
+                       
+            }
+            
+            System.out.println("");
         }
     }
 }   
