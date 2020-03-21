@@ -106,6 +106,17 @@ public class LibroCalificaciones {
        
     }
     
-   
+    //Determina la calificacion promedio para un conjunto especifico de calificaciones
+    public double obtenerPromedio(int[] conjuntoDeCalificaciones){
+        int total = 0;
+        
+        //suma las calificaciones para un estudiante
+        for(int calificaciones : conjuntoDeCalificaciones){
+            total += calificaciones;
+            
+        }
+        return (double) total / conjuntoDeCalificaciones.length;
+    }
+    
    
 }   
