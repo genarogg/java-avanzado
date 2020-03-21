@@ -80,7 +80,21 @@ public class LibroCalificaciones {
         }
         return calificacionAlta;
     }
-
+    
+    public void imprimirCalificaciones(){
+        System.out.printf("Las calificaciones son: %n%n");
+        System.out.print("alumno:    |  n |  ");
+        
+        //Crea un encabezado de columna para cada una de las pruebas
+        for(int prueba = 0; prueba < calificaciones[0].length; prueba++){
+            System.out.printf("Prueba %d |", prueba + 1);
+        }
+        System.out.println("Promedio");//encabezado de columna de promedio de estudiantes
+        
+       //crea filas/columnas de texto que representen el arreglo de calificaciones
+      
+       
+    }
     
    
    
