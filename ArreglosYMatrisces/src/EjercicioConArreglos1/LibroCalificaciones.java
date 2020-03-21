@@ -118,5 +118,19 @@ public class LibroCalificaciones {
         return (double) total / conjuntoDeCalificaciones.length;
     }
     
-   
+    public void imprimirGraficoDeBarras(){
+        System.out.println("Distribucion de calificaciones en general:");
+        
+        //almacina la frecuencia de las calificaciones en cada rango de 10 calificaciones
+        int[] frecuencia = new int[11];
+        
+        //para cada calificacion en libroCalificaciones, incrementa la frecuencia apropiada
+        for(int[] califEstudiantes : calificaciones){
+            for(int calificaciones : califEstudiantes){
+                ++frecuencia[calificaciones /10];
+            }
+        }
+       
+        }
+    }
 }   
