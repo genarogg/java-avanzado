@@ -16,6 +16,15 @@ public class LanzamientoDeExceptiones {
         noLanzaException();
     }
     
-   
+    public static void lanzaException()throws Exception{
+        try{
+            System.out.println("Metodo lanzaExcepcion");
+            throw new Exception();
+        }
+        catch(Exception e){
+            System.err.println("La exception se manejo en el metodo lanzaException");
+            throw e;
+        }
+    }
   
 }
