@@ -26,5 +26,18 @@ public class LanzamientoDeExceptiones {
             throw e;
         }
     }
-  
+    
+    public static void noLanzaException(){
+        try {
+            System.err.println("Metodo noLanzaException");
+        }
+        catch (Exception e) {
+            System.err.println("se ejecuto Finally en noLanzaException");
+        }
+        finally{
+            System.out.println("se ejecuto el bloque finally en noLanzaException");
+        }
+        
+        System.out.println("Fin del metodo noLanzaException");
+    }
 }
