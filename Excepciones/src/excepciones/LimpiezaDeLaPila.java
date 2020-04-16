@@ -18,5 +18,23 @@ public class LimpiezaDeLaPila {
     }
     
     public static void main(String[] args) {
-       
+        try {
+            metodo1();
+        }
+        catch (Exception e) {
+            System.err.printf("%s%n%n", e.getMessage());
+            
+            e.printStackTrace();
+            
+            StackTraceElement[] elemntosRastreo = e.getStackTrace();
+            
+            //se obtiene la informacion de rastreo de la pila
+            System.out.println("\nRastreo de la pila de getStackTrace:\n");
+            System.out.println("Clase \t\tArchivo\t\tLinea\tMetodo");
+            
+            
+         
+        }
+        
+    }
 }
