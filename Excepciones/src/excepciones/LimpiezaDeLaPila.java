@@ -33,7 +33,14 @@ public class LimpiezaDeLaPila {
             System.out.println("Clase \t\tArchivo\t\tLinea\tMetodo");
             
             
-         
+            //Itera a taves de elementos de rastreo para obtener la descripcion de la excepcion
+            for(StackTraceElement elemento : elemntosRastreo){
+                System.out.printf("%s \t", elemento.getClassName());
+                System.out.printf("%s \t", elemento.getFileName());
+                System.out.printf("%s \t", elemento.getLineNumber());
+                System.out.printf("%s \n", elemento.getMethodName());
+            
+            }
         }
         
     }
