@@ -43,6 +43,22 @@ public class AdiccionDinamicaDeCaracteres {
              .append("\n")
              .append(ultimoBuffer);
                 
+        System.out.printf("buffer contiene%n%s%n", bufer.toString());
         
+        //El compilador puede usar StringBuilder y metodos append para implementar los operadores
+        //+ y += de concatenacion de String
+        String cadena1 = "Hola";
+        String cadena2 = "BC";
+        int valor =22;
+        
+        //La instruccion String s = cadena1 + cadena2 + valor
+        //Decha concatenacion puede ser realizada con StringBuilder de la siguiente manera
+        String s = new StringBuilder().append("hola").append("Bc").append(22).toString();
+        
+        //La instruccion s += "!";
+        //puede ser realizar en StringBuilder de la siguiente manera
+        s = new StringBuilder().append(s).append("!").toString();
+        
+        System.out.printf("%s",s);
     }
 }
