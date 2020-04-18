@@ -21,7 +21,17 @@ public class MetodosStaticChar2 {
         int opcion = scanner.nextInt();
         
         //procesa la peticion
-       
+        switch(opcion){
+            case 1:{//convierte digito a caracter
+                System.out.println("Escribe un digito:");
+                break;
+            } 
+            case 2:{//convierte caracter a digito
+                System.out.println("Escriba un caracter:");
+                char caracter = scanner.next().charAt(0);
+                System.out.printf("convertir caracter a digito: %s%n", Character.digit(caracter, raiz));
+            }
+        }
         
     }
     
