@@ -15,7 +15,17 @@ public class StringBuilderChars {
         buffer.getChars(0, buffer.length(), arregloChars, 0);
         System.out.print("Los characteres son:");
         
+        for(char caracter : arregloChars){
+            System.out.println(caracter);
+        }
         
+        buffer.setCharAt(0, 'H');
+        buffer.setCharAt(7, 'T');
+        
+        System.out.printf("%n%nbuffer = %s", buffer.toString());
+        
+        buffer.reverse();
+        System.out.printf("%n%nbuffer = %s%n", buffer.toString());
        
     }
 }
