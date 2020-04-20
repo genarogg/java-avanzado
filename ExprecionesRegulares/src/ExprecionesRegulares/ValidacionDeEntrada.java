@@ -16,7 +16,10 @@ public class ValidacionDeEntrada {
         return apellidoPaterno.matches("[a-zA-Z]+(['-][a-zA-Z]+)*");
     }
     
- 
+    public static boolean validarDireccion(String direccion){
+        return direccion.matches("\\d+\\s+([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+)");
+    }
+
    
     
     public static void main(String[] args) {
