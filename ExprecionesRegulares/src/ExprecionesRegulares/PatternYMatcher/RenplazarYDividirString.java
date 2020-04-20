@@ -13,7 +13,12 @@ public class RenplazarYDividirString {
         
         System.out.printf("Cadena 1 original: %s%n", primeraCadena);
         
-      
+        //sustituye '*' con '^'
+        primeraCadena = primeraCadena.replaceAll("\\*", "^");
+        
+        System.out.printf("^ sustituye a *: %s%n", primeraCadena);
+        
+     
         
     }
 }
