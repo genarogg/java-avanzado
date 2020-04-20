@@ -62,7 +62,18 @@ public class ValidacionDeEntrada {
         
         System.out.println("\nValidar Resultados:");
         
-        
+        if(!validacionDelPrimerNombre(primerNombre)){
+            System.out.println("Primer nombre invalido");
+        }
+        else if(!validarApellidoPaterno(apellidoPaterno)){
+            System.out.println("Primer apellido invalido");
+        }
+        else if(!validarDireccion(direcion)){
+            System.out.println("Direccion invalida");
+        }
+        else if(!validarCiudad(ciudad)){
+            System.out.println("Ciudad invalida");
+        }
         
     }
 }
