@@ -23,7 +23,12 @@ public class ValidacionDeEntrada {
     public static boolean validarCiudad(String ciudad){
         return ciudad.matches("([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+)");
     }
+    
+    public static boolean validarEstado(String estado){
+        return estado.matches("([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+)");
+    }
 
+    
    
     
     public static void main(String[] args) {
