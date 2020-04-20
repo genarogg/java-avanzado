@@ -32,7 +32,9 @@ public class ValidacionDeEntrada {
         return cp.matches("\\d{5}");
     }
     
-   
+    public static boolean validarTelefono(String telefono){
+        return telefono.matches("[0-9]\\d{2}-[0-9]\\d{2}-\\d{4}");
+    }
     
     public static void main(String[] args) {
         
