@@ -12,7 +12,11 @@ public class ValidacionDeEntrada {
         return primerNombre.matches("[A-Z][a-zA-Z]*");
     }
     
-
+    public static boolean validarApellidoPaterno(String apellidoPaterno){
+        return apellidoPaterno.matches("[a-zA-Z]+(['-][a-zA-Z]+)*");
+    }
+    
+ 
    
     
     public static void main(String[] args) {
