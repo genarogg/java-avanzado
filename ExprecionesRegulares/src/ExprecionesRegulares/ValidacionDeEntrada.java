@@ -37,6 +37,32 @@ public class ValidacionDeEntrada {
     }
     
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Escriba el primer nombre");
+        String primerNombre = scanner.nextLine();
+        
+        System.out.println("Escribe el apellido paterno");
+        String apellidoPaterno = scanner.nextLine();
+        
+        System.out.println("Escriba la direccion");
+        String direcion = scanner.nextLine();
+        
+        System.out.println("Escriba la ciudad");
+        String ciudad = scanner.nextLine();
+        
+        System.out.println("Escriba el estado");
+        String estado = scanner.nextLine();
+        
+        System.out.println("Escriba el codigo postal");
+        String cp = scanner.nextLine();
+        
+        System.out.println("Escriba el telefono");
+        String telefono = scanner.nextLine();
+        
+        System.out.println("\nValidar Resultados:");
+        
+        
         
     }
 }
