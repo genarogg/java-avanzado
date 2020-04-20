@@ -74,6 +74,24 @@ public class ValidacionDeEntrada {
         else if(!validarCiudad(ciudad)){
             System.out.println("Ciudad invalida");
         }
-        
+        else if(!validarEstado(estado)){
+            System.out.println("Estado invalido");
+        }
+        else if(!validarCP(cp)){
+            System.out.println("Codigo postal invalido");
+        }
+        else if(!validarTelefono(telefono)){
+            System.out.println("Numero telefonico invalido");
+        }
+        else if(validacionDelPrimerNombre(primerNombre) && 
+                validarApellidoPaterno(apellidoPaterno) && 
+                validarDireccion (direcion) && 
+                validarCiudad(ciudad) && 
+                validarEstado(estado) &&
+                validarCP(cp) &&
+                validarTelefono(telefono)
+                ){
+            System.out.println("La entrada es valida. Gracias");
+        }
     }
 }
