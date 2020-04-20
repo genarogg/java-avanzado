@@ -18,7 +18,14 @@ public class RenplazarYDividirString {
         
         System.out.printf("^ sustituye a *: %s%n", primeraCadena);
         
-     
+        //sustituye estrellas con intercaladores
+        primeraCadena = primeraCadena.replaceAll("estrellas", "intercaladoras");
+        
+        System.out.printf("Cada palabra se sustituye por \"palabra\": %s%n%n"
+                            ,primeraCadena.replaceAll("\\w", "palabra"));
+        
+        System.out.printf("Cadena 2 original: %s%n", segundaCadena);
+        
         
     }
 }
