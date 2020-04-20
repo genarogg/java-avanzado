@@ -26,6 +26,17 @@ public class RenplazarYDividirString {
         
         System.out.printf("Cadena 2 original: %s%n", segundaCadena);
         
+        //Sustituye las palabras con 'palabra'
+        for(int i = 0; i < 3;i++){
+            segundaCadena = segundaCadena.replaceFirst("\\d", "digito");
+        }
         
+        System.out.printf("Los primeros tres digitos se sustituyeron por \"digito\": %s%n",
+                            segundaCadena);
+        
+        System.out.print("Cadena dividida es comas: ");
+        
+        String[] resultados = segundaCadena.split(",\\s*");
+        System.out.println(Arrays.toString(resultados));
     }
 }
