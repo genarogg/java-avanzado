@@ -62,6 +62,17 @@ public class PruebaList {
         lista.subList(inicio, fin).clear();//Elimina los elementos
     }
     
-   
+    //Imprime la lista inversa
+    private static void imprimirListaInversa(List<String> lista){
+        ListIterator<String> iterador = lista.listIterator(lista.size());
+        
+        System.out.printf("%nLista inversa: %n");
+        
+        //imprime la lista en orden inverso
+        while(iterador.hasPrevious()){
+            System.out.printf("%s ", iterador.previous());
+        }
+        System.out.println("");
+    }
     
 }
