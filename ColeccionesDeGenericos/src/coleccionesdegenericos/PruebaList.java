@@ -47,7 +47,16 @@ public class PruebaList {
             System.out.printf("%s ", color);
         }
     }
+    //localiza los objetos String y los convierte en mayusculas 
     
+    private static void convertirCadenasAMayusculas(List<String> lista){
+        ListIterator<String> iterador  = lista.listIterator();
+        
+        while(iterador.hasNext()){
+            String color = iterador.next();//obtiene elementos de las iteracion actual
+            iterador.set(color.toUpperCase());//Convierte todo a Mayusculas
+        }
+    }
     
  
     
