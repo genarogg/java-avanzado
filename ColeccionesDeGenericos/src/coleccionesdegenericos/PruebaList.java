@@ -18,7 +18,13 @@ public class PruebaList {
             lista1.add(color);
         }
         
+        //Agrega elementos de colores2 a lista2
+        String [] colores2 = {"dorado", "blanco", "cafe", "azul", "gris", "plateado"};
+        List<String> lista2 = new LinkedList<>();
         
+        for(String color : colores){
+            lista2.add(color);
+        }
         
     }
     
