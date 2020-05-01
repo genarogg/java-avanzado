@@ -26,6 +26,17 @@ public class PruebaList {
             lista2.add(color);
         }
         
+        lista1.addAll(lista2); //concatena las listas
+        lista2 = null; //libera los recursos
+        imprimirLista(lista1); //imprime los elementos de lista1
+        
+        convertirCadenasAMayusculas(lista1);//convierte la cadena a mayusculas
+        imprimirLista(lista1);//Imprime nuevamente la lista1
+        
+        System.out.printf("%nEliminando elementos 4 a 6...");
+        eliminarElementos(lista1, 4, 7); //Elimina los elementos 4 a 6 de la lista
+        imprimirLista(lista1);
+        imprimirListaInversa(lista1);
     }
     
     
