@@ -48,7 +48,6 @@ public class PruebaList {
         }
     }
     //localiza los objetos String y los convierte en mayusculas 
-    
     private static void convertirCadenasAMayusculas(List<String> lista){
         ListIterator<String> iterador  = lista.listIterator();
         
@@ -58,7 +57,10 @@ public class PruebaList {
         }
     }
     
- 
+    //Obtiene sublista y utiliza el metodo clear para eliminar los elementos de la misma
+    private static void eliminarElementos(List<String> lista,int inicio, int fin){
+        lista.subList(inicio, fin).clear();//Elimina los elementos
+    }
     
    
     
