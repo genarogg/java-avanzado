@@ -39,7 +39,14 @@ public class PruebaList {
         imprimirListaInversa(lista1);
     }
     
-    
+    //Imprime el objeto del objeto list
+    private static void imprimirLista(List<String> lista){
+        System.out.printf("%nlista:%n");
+        
+        for(String color : lista){
+            System.out.printf("%s ", color);
+        }
+    }
     
     
  
