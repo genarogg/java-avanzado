@@ -47,5 +47,37 @@ public class PruebaCollection {
             lista.add(color);
         }
         
+        //Agrega los elementos en el arreglos eliminarColores a eliminarLista
+        //El arreglo eliminarColores contiene los colores que se van a eliminar en el arreglo colores
+        String[] eliminarColores = {"ROJO", "BLANCO", "AZUL"};
+    
+        //Se crea un objeto ArrayList y se asigna a la referencia elimanarLista
+        //este objeto contendra los elementos del arreglo eliminarColores
+        List <String> eliminarLista = new ArrayList<String>();
+        
+        //Este ciclo llena "eliminarLista" con los Strings del arreglo "eliminarColores"
+        for(String color : eliminarColores){
+            eliminarLista.add(color);
+        }
+        
+        //imprime en pantalla el contenido de la lista
+        System.out.println("ArrayList: ");
+        
+        //Se imprime en pantalla cada elemento de la lista
+        //Se muestra el uso de los metodos size y get de List
+        for(int cuenta = 0; cuenta < lista.size(); cuenta++){
+            System.out.printf("%s ", lista.get(cuenta));
+        }
+        //elimina de la lista los colores contenidos en eliminarLista
+        eliminarColores(lista, eliminarLista);
+        
+        //imprime en pantall el contenido de la lista
+        System.out.println("\n\nArrayList despues de llamar al metodo eliminarColores: ");
+        
+        for(String color : lista){
+            System.out.printf("%s %n", color);
+        }
+        
+          
     }   
 }
