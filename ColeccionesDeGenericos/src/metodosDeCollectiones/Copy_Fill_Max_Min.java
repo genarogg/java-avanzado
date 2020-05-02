@@ -31,6 +31,10 @@ public class Copy_Fill_Max_Min {
         System.out.println("Despues de copiar, copiaLista contiene: ");
         imprimir(copiaLista);
         
+        //llena la lista con letras R
+        Collections.fill(listaLetras, 'R');
+        System.out.println("Despues de llamar a fill, lista contiene: ");
+        imprimir(listaLetras);
         
     }
     
