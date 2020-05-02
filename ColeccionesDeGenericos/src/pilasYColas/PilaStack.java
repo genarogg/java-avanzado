@@ -43,5 +43,14 @@ public class PilaStack {
             e.printStackTrace();
         }
     }
-    
+    //Muestra el contenido de la pila
+    private static void imprimirPila(Stack<Number> pila){
+        if(pila.isEmpty()){
+            System.out.printf("La pila esta vacia %n%n");
+        }
+        else{
+            System.out.printf("El elemento superior es: %s%n", pila.peek());
+            System.out.printf("la pila contiene: %s (cima) %n", pila);
+        }
+    }
 }
