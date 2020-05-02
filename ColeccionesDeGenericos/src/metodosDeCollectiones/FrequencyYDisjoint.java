@@ -36,6 +36,13 @@ public class FrequencyYDisjoint {
             System.out.print(" " + s);
         }
         
+        //obtiene la frecuencia de rojo
+        int frecuencia = Collections.frequency(lista2, "rojo");
+        System.out.printf("%nFrecuencia de rojo en lista2: %d%n", frecuencia);
         
+        //comprueba si lista1 y lista2 tienen elementos en comun
+        boolean desunion = Collections.disjoint(lista1, lista2);
+        
+        System.out.printf("lista1 y lista2 %s elementos en comun%n", desunion ? "no tiene" : "tiene");
     }
 }
