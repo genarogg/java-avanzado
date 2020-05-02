@@ -38,5 +38,14 @@ public class Copy_Fill_Max_Min {
         
     }
     
-   
+    private static void imprimir(List<Character>refLista){
+        System.out.print("La lista es: ");
+        
+        for(Character elemento :refLista){
+            System.out.print(elemento);
+        }
+        
+        System.out.printf("%nMax: %s", Collections.max(refLista));
+        System.out.printf("  Min %s%n", Collections.min(refLista));
+    }
 }
