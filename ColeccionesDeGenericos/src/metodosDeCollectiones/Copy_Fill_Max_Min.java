@@ -18,7 +18,10 @@ public class Copy_Fill_Max_Min {
         System.out.println("Lista contiene:");
         imprimir(listaLetras);
         
-       );
+        //invierte y muestra el objeto List<Character>
+        Collections.reverse(listaLetras);
+        System.out.println("Despues de llamar a reverse, lista contiene:");
+        imprimir(listaLetras);
         
     }
     
