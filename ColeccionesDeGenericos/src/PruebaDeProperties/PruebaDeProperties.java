@@ -48,7 +48,20 @@ public class PruebaDeProperties {
         }
     }
     
-   
+    private static void guardarPropiedades(Properties props){
+        //guardar el contenido del objeto properties
+        try{
+            FileOutputStream salida = new FileOutputStream("props.properties");
+            props.store(salida, "propiedades de ejemplo");
+            salida.close();
+            System.out.println("Despues de guardar las propiedades");
+            listarPropiedades(props);
+            
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
+    }
    
     
    
