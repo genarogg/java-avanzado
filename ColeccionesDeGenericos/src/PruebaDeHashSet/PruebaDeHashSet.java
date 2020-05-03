@@ -10,7 +10,17 @@ import java.util.List;
  * @author Genarogg
  */
 public class PruebaDeHashSet {
-   
+    public static void main(String[] args) {
+        String [] colores = {"rojo", "blanco", "azul", "verde", "gris",
+                             "naranja", "carne", "blanco", "cyan",
+                             "durazno", "gris", "naranja"};
+        
+        List<String> lista = Arrays.asList(colores);
+        System.out.printf("Lista de colores: %s%n", lista);
+        
+        //elimina duplicados y luego imprime los valores unicos
+        imprimirSinDuplicados(lista);
+    }
 
     public static void imprimirSinDuplicados(Collection<String> valores){
         //Crea un objeto HashSet
