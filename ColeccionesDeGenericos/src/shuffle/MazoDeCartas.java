@@ -34,4 +34,8 @@ public class MazoDeCartas {
         }
     }
     
+    public static void main(String[] args) {
+        MazoDeCartas cartas = new MazoDeCartas();
+        cartas.imprimirCartas();
+    }
 }
