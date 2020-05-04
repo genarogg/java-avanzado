@@ -33,5 +33,11 @@ public class PruebaSortedSet {
         
         }
     
-        
+        public static void imprimirConjunto(SortedSet<String> conjunto){
+            for(String s : conjunto){
+                System.out.printf("%s ", s);
+            }
+            
+            System.out.println();
+    }
 }
