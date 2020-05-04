@@ -28,6 +28,10 @@ public class MazoDeCartas {
         Collections.shuffle(listaCartas);
     }
     
- 
+    public void imprimirCartas(){
+        for (int i = 0; i < listaCartas.size(); i++) {
+            System.out.printf("%-23s%s", listaCartas.get(i), ((i + 1) % 4 == 0) ? "\n" : "");
+        }
+    }
     
 }
