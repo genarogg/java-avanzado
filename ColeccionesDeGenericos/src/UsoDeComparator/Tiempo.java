@@ -56,6 +56,19 @@ public class Tiempo {
         this.segundo = segundo;
     }
     
-   
+    //metodos para obtener
+    public int getHora(){
+        return this.hora;
+    }
+    
+    public int getMinuto(){
+        return this.minuto;
+    }
+    
+    public int getSegundo(){
+        return segundo;
+    }
+    
+    
     
 }
