@@ -20,6 +20,17 @@ public class UsoDeMapConteoTipoPalabras {
         
     }
     
+    //Crea un mapa a partir de la entrada del usuario
+    private static void crearMap(Map<String, Integer> map){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Escriba una cadena");
+        String entrada = sc.nextLine();
+        
+        //divide la entrada en tokens
+        String [] tokens = entrada.split(" ");
+        
    
+        
+    }
     
 }
