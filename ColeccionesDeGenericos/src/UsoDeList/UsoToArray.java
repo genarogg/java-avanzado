@@ -1,6 +1,4 @@
-public class UsoToArray {
-    
-}package UsoDeList;
+package UsoDeList;
 
 import java.util.Arrays;
 import java.util.LinkedList;
