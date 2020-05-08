@@ -34,7 +34,16 @@ public class Tiempo {
         this.segundo = segundo;
     }
     
-
+    //valida y establec la hora
+    public void setHora(int hora){
+        if(hora < 0 || hora >= 24){
+            throw new IllegalArgumentException("hora debe estar entre 0 y 23");
+        }
+        this.hora = hora;
+    }
+ 
+    
+ 
    
     
 }
