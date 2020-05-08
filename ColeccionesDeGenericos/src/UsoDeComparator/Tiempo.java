@@ -49,7 +49,13 @@ public class Tiempo {
         this.minuto = minuto;
     }
     
- 
+    public void setSegundo(int segundo){
+        if(minuto < 0 || minuto >= 60){
+            throw new IllegalArgumentException("segundo debe estar entre 0 y 59");
+        }
+        this.segundo = segundo;
+    }
+    
    
     
 }
