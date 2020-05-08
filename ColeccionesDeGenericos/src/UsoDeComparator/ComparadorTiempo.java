@@ -1,6 +1,4 @@
-public class ComparadorTiempo {
-    
-}package UsoDeComparator;
+package UsoDeComparator;
 
 import java.util.Comparator;
 
