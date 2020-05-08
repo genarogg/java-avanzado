@@ -74,6 +74,12 @@ public class Tiempo {
         return String.format("%02d:%02d:%02d", getHora(), getMinuto(), getSegundo());
     }
     
+    //Covertir a String en formato de hoar estandar (HH:MM:SS AM o PM)
+    @Override
+    public String toString(){
+        return String.format("%d:%02d:%02d %s", ((getHora() == 0 || getHora() == 12) ? 12 : getHora() % 12), getMinuto(), getSegundo(), (getHora() < 12 ? "AM" : "PM"));
+  
+    }
     
     
 }
