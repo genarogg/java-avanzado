@@ -69,6 +69,11 @@ public class Tiempo {
         return segundo;
     }
     
+    //convierte a String en formato de hora universal (HH:MM:SS)
+    public String asStringUniversal(){
+        return String.format("%02d:%02d:%02d", getHora(), getMinuto(), getSegundo());
+    }
+    
     
     
 }
