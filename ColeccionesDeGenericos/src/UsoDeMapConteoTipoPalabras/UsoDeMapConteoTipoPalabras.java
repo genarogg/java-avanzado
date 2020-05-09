@@ -44,5 +44,18 @@ public class UsoDeMapConteoTipoPalabras {
         }
         
     }
-    
+    //Este metodo muestra el contenido del mapa 
+    private static void mostrarMap(Map<String, Integer> map){
+        Set<String> claves = map.keySet();//Obtiene las claves
+        //ordena las claves
+        TreeSet<String> clavesOrdenadas = new TreeSet<>(claves);
+        
+        System.out.printf("%nEl mapa contiene: %nClave\t\tValor%n");
+        //Genera la salida para cada clave en el mapa
+        for(String clave :clavesOrdenadas){
+            System.out.printf("%-10s%10s%n", clave, map.get(clave));
+        }
+        System.out.printf("Tamaño: %d%n¿vacio?: %b%n", map.size(), map.isEmpty());
+        
+    }
 }
