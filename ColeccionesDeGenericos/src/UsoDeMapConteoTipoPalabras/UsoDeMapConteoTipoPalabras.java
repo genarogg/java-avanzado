@@ -29,7 +29,19 @@ public class UsoDeMapConteoTipoPalabras {
         //divide la entrada en tokens
         String [] tokens = entrada.split(" ");
         
-   
+        //procesamiento del texto de entrada{
+        for(String token : tokens){
+            String palabra = token.toLowerCase(); //Pasa todo a minunculas
+            
+            //Si el mapa contiene la palabra
+            if(map.containsKey(palabra)){ 
+                int cuenta = map.get(palabra);//obtiene la cuenta actual
+                map.put(palabra, cuenta + 1);
+            }
+            else{
+                map.put(palabra, 1);
+            }
+        }
         
     }
     
