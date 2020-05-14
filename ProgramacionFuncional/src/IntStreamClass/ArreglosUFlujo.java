@@ -22,5 +22,17 @@ public class ArreglosUFlujo {
                         .collect(Collectors.toList())//Se crea una nueva coleccion con los resultados
         );
         
+        //valores mayores que 4
+        List<Integer> mayorQue4 = Arrays.stream(valores)
+                                    .filter(value -> value > 4)
+                                    .collect(Collectors.toList());
+        System.out.printf("Valores mayores que 4: %s%n", mayorQue4);
+   
+        System.out.printf("Valores ordenados mayores que 4: %s%n",
+                Arrays.stream(valores)
+                    .filter(value -> value > 4)
+                    .sorted()
+                    .collect(Collectors.toList()));
+        
         
 }
