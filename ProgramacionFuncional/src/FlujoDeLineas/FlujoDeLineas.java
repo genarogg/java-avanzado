@@ -24,7 +24,19 @@ public class FlujoDeLineas {
         
         
         
-      
+        try {
+            Map<String, Long> cuentaPalabras;
+            cuentaPalabras = Files.lines(Paths.get("Parrafo.txt"))
+                    .map(line -> line.replaceAll("\\p{P}", ""))
+                    .flatMap(line -> patron.splitAsStream(line))
+                    .collect(Collectors.groupingBy(String::toLowerCase, TreeMap::new, Collectors.counting()));
+            
+            //Muestra las palabreas agrupadas por letas inicial
+           
+        }
+        catch (IOException ex) {
+            System.out.println("Fallo la carga del archivo");
+        }
    
         
         
