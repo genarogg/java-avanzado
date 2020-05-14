@@ -32,7 +32,16 @@ public class FlujoDeLineas {
                     .collect(Collectors.groupingBy(String::toLowerCase, TreeMap::new, Collectors.counting()));
             
             //Muestra las palabreas agrupadas por letas inicial
-           
+            cuentaPalabras.entrySet()
+                            .stream()
+                            .collect(Collectors.groupingBy(entry -> entry.getKey().charAt(0),
+                                    TreeMap::new, Collectors.toList()))
+                                .forEach((letra, listaPalabras) -> {
+                                    System.out.printf("%n%C%n", letra);
+                                    listaPalabras.stream().forEach(palabra -> System.out.printf(
+                                        "%13s: %d%n", palabra.getKey(), palabra.getValue()));
+                                }
+                            );
         }
         catch (IOException ex) {
             System.out.println("Fallo la carga del archivo");
