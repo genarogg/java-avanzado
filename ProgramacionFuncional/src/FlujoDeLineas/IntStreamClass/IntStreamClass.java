@@ -44,6 +44,22 @@ public class IntStreamClass {
                             .forEach(valor -> System.out.printf("%d ", valor));
         System.out.println();
         
+        //valores impares multiplicados por 10 y mostrados en orden
+        System.out.printf("Valores imPares multiplicados por 10 y mostrados en orden: ");
+        IntStream.of(valores)
+                            .filter(valor -> valor % 2 != 0)
+                            .map(valor -> valor * 10)
+                            .sorted()
+                            .forEach(valor -> System.out.printf("%d ", valor));
+        System.out.println();
+        
+        //suma el rango de enteros del 1 al 10, exclusivo
+        System.out.printf("%nSuma de enteros del 1 al 9: %d%n", IntStream.range(1, 10).sum());
+        
+        //suma el rango de enteros de 1 al 10, inclusivo
+        System.out.printf("Suma de enteros del 1 al 10: %d%n",
+                        IntStream.rangeClosed(1, 10).sum());
+        
         
         
     }
