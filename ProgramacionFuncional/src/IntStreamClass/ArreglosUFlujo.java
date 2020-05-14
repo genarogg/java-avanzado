@@ -34,5 +34,10 @@ public class ArreglosUFlujo {
                     .sorted()
                     .collect(Collectors.toList()));
         
-        
+        //objetos List mayoresQue4 ordenado con flujos
+        System.out.printf("Valores mayores que 4 (ascendente con flujos): %s%n",
+                            mayorQue4.stream()
+                                .sorted()
+                                    .collect(Collectors.toList()));
+    }
 }
