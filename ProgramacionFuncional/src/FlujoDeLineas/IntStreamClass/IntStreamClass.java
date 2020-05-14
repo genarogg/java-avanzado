@@ -1,6 +1,4 @@
-public class IntStreamClass {
-    
-}package IntStreamClass;
+package IntStreamClass;
 
 import java.util.stream.IntStream;
 
