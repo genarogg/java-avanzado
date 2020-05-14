@@ -27,6 +27,24 @@ public class IntStreamClass {
         System.out.printf("Promedio: %.2f%n", IntStream.of(valores).average().getAsDouble());
         System.out.printf("Summaary static: %s", IntStream.of(valores).summaryStatistics());
         
+        //suma de valores con el metodo reduce
+        System.out.printf("%nSuma mediante el metodo reduce: %d%n", IntStream.of(valores).reduce(0, (x,y) -> x + y));
+        
+        //suma de cadros de lso valores con el metodo reduce
+        System.out.printf("Suma de cuadrados mediante el metodo reduce: %d%n", IntStream.of(valores).reduce(0, ( x,y) -> x + y * y));
+        
+        //producto de los valores con el metodo reduce
+        System.out.printf("Producto mediante el metodo reduce: %d%n", IntStream.of(valores).reduce(1, (x, y) -> x * y));
+        
+        //Valores pares mostrados en orden
+        System.out.printf("%nValores pares mostrados en orden: ");
+        IntStream.of(valores)
+                            .filter(valor -> valor % 2 == 0)
+                            .sorted()
+                            .forEach(valor -> System.out.printf("%d ", valor));
+        System.out.println();
+        
+        
         
     }
 }
