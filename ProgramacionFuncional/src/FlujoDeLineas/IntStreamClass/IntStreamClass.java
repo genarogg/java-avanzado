@@ -19,6 +19,14 @@ public class IntStreamClass {
         IntStream.of(valores).forEach(valor -> System.out.printf("%d ", valor));
         System.out.println();
         
+        //cuenta, min, max, suma y promedio
+        System.out.printf("%nCuenta: %d%n", IntStream.of(valores).count());
+        System.out.printf("Min: %d%n", IntStream.of(valores).min().getAsInt());
+        System.out.printf("max: %d%n", IntStream.of(valores).max().getAsInt());
+        System.out.printf("Suma: %d%n", IntStream.of(valores).sum());
+        System.out.printf("Promedio: %.2f%n", IntStream.of(valores).average().getAsDouble());
+        System.out.printf("Summaary static: %s", IntStream.of(valores).summaryStatistics());
+        
         
     }
 }
