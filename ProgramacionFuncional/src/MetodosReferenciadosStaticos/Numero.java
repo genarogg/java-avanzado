@@ -32,6 +32,18 @@ public class Numero {
     
     List<Integer> list = Arrays.asList(12, 5, 45, 18, 33, 24, 40);
     
+    //Mediante una Clase anonima
+    List<Integer> numerosEncontrados1 = encontrarNumeros(list, new BiPredicate<Integer, Integer>(){
+        @Override
+        public boolean test(Integer int1, Integer int2) {
+            return Numero.esMayorQueCincuenta(int1, int2);
+        }
+        
+    });
+    
+    List<Integer> numerosEncontrados2 = encontrarNumeros(list,(int1, int2) -> Numero.esMayorQueCincuenta(int1, int2));
+    
+    List<Integer> numerosEncontrados3 = encontrarNumeros(list, Numero::esMayorQueCincuenta);
     
   
 }
