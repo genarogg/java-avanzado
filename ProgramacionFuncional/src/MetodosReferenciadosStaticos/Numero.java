@@ -45,5 +45,22 @@ public class Numero {
     
     List<Integer> numerosEncontrados3 = encontrarNumeros(list, Numero::esMayorQueCincuenta);
     
-  
+    public static void main(String[] args) {
+        Numero n = new Numero();
+        
+        for(Integer integer : n.numerosEncontrados1){
+            System.out.print(integer + " ");
+        }
+        System.out.println("");
+        
+        for(Integer integer : n.numerosEncontrados2){
+            System.out.print(integer + " ");
+        }
+        System.out.println("");
+        
+        for(Integer integer : n.numerosEncontrados3){
+            System.out.print(integer + " ");
+        }
+        System.out.println("");
+    }
 }
