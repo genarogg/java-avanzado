@@ -1,4 +1,4 @@
-package Predicado.Predicados;
+package Predicados;
 
 import java.util.ArrayList;
 import java.util.List;
