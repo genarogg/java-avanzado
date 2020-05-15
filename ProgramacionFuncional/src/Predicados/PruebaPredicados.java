@@ -35,6 +35,11 @@ public class PruebaPredicados {
         Predicate<Persona> predicado2 = p -> p.getEdad() < 30;
         Predicate<Persona> predicado3 = predicado1.and(predicado2);
         
+        //metodo default or
+        Predicate<Persona> predicado4 = p -> p.getEdad() > 65;
+        Predicate<Persona> predicado5 = predicado4.or(predicado3);
+        
+        
     
     }   
 }
