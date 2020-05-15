@@ -39,6 +39,14 @@ public class PruebaPredicados {
         Predicate<Persona> predicado4 = p -> p.getEdad() > 65;
         Predicate<Persona> predicado5 = predicado4.or(predicado3);
         
+        //metodo default negate
+        Predicate<Persona> predicado6 = p -> p.getEdad() > 65;
+        Predicate<Persona> predicado7 = predicado4.or(predicado6).negate();
+        
+        System.out.printf("%nUltimos filtros:%n%n");
+        listaPersonas.stream()
+                        .filter(predicado7)
+                        .forEach(p -> System.out.println(p.getNombre()));
         
     
     }   
