@@ -18,7 +18,19 @@ public class Numero {
         return (n1 + n2) < 50;
     }
     
-
+    public static List<Integer> encontrarNumeros(List<Integer> l,BiPredicate <Integer, Integer> p){
+        //Creamos un objeto ArrayList
+        List<Integer> nuevaLista = new ArrayList<>();
+        for(Integer i : l){
+            //Realizar el testeo en base a la implementacion de test del objeto BiPredicate pasado como un argumento
+            if(p.test(i, i + 10)){
+                nuevaLista.add(i);
+            }
+        }
+        return nuevaLista;
+    }
+    
+    List<Integer> list = Arrays.asList(12, 5, 45, 18, 33, 24, 40);
     
     
   
