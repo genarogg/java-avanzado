@@ -30,6 +30,11 @@ public class PruebaPredicados {
                         .filter(predicadoNombre)
                             .forEach(p -> System.out.println(p.getApellidos()));
     
+        //metodo default and
+        Predicate<Persona> predicado1 = p -> p.getEdad() > 18;
+        Predicate<Persona> predicado2 = p -> p.getEdad() < 30;
+        Predicate<Persona> predicado3 = predicado1.and(predicado2);
+        
     
     }   
 }
