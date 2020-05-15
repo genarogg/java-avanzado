@@ -23,6 +23,13 @@ public class PruebaPredicados {
         listaPersonas.stream().forEach(p -> System.out.println(p.getNombre()));
         
         System.out.println();
-       
+        //Creamos un predicado que se encargue de definir una condicion que permite filtrar la lista
+        Predicate<Persona> predicadoNombre = p -> p.getNombre().equals("pepe");
+        
+        listaPersonas.stream()
+                        .filter(predicadoNombre)
+                            .forEach(p -> System.out.println(p.getApellidos()));
+    
+    
     }   
 }
