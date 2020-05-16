@@ -84,6 +84,13 @@ public class ProcesarEmpleados {
                    .sorted()
                    .forEach(System.out::println);
         
+        //muestra solo nombre y apellido
+        System.out.printf("%nNombre de empleados en orden por apellido y luego" 
+                + "por nombre:%n");
+        lista.stream()
+                    .sorted(apellidoNombre)
+                    .map(Empleados::obtenerNombre)
+                    .forEach(System.out::println);
         
        
         
