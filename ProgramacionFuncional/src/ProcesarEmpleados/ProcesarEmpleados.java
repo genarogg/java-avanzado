@@ -44,6 +44,14 @@ public class ProcesarEmpleados {
         //Predicado que devuelve true para salarios en el rango $4000 - $6000
         Predicate<Empleados> cuatroASeisMil = empleado -> (empleado.getSalario() >= 4000 && empleado.getSalario() <= 6000);
         
+        //Muestra los empleados con salarios en rango de $4000 a $6000
+        //en orden ascendente por salario
+        
+        System.out.printf("%nEmpleados que ganan $4000-$6000 mensuales ordenados por salario%n");
+        
+        lista.stream().filter(cuatroASeisMil).sorted(Comparator.comparing(empleado -> empleado.getSalario()))
+                .forEach(System.out:: println);
+        
         
       
        
