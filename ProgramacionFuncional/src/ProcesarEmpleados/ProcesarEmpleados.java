@@ -92,6 +92,11 @@ public class ProcesarEmpleados {
                     .map(Empleados::obtenerNombre)
                     .forEach(System.out::println);
         
+        //agrupa empleados por departamento
+        Map<String, List<Empleados>> agrupadoPorDepartamento =
+                lista.stream()
+                        .collect(Collectors.groupingBy(Empleados :: getDepartamento));
+        
        
         
             
