@@ -59,6 +59,9 @@ public class ProcesarEmpleados {
                             .findFirst()
                             .get());
         
+        //Funciones para obtener primer nombre y apellido de un empleado
+        Function <Empleados, String> porPrimerNombre = Empleados::getPrimerNombre;
+        Function <Empleados, String> porApellido = Empleados::getApellidoPaterno;
         
       
        
