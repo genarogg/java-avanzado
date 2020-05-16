@@ -37,7 +37,14 @@ public class ProcesarEmpleados {
         //Obtiene una vista List de los objetros Empleados
         List<Empleados> lista = Arrays.asList(empleados);
 
-      
+        //Muestra todos los objetros Empleados
+            System.out.println("Lista completa de empleados: ");
+            lista.stream().forEach(System.out::println);
+            
+        //Predicado que devuelve true para salarios en el rango $4000 - $6000
+        Predicate<Empleados> cuatroASeisMil = empleado -> (empleado.getSalario() >= 4000 && empleado.getSalario() <= 6000);
+        
+        
       
        
         
