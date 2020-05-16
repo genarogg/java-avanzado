@@ -69,7 +69,14 @@ public class ProcesarEmpleados {
              .sorted(apellidoNombre)
              .forEach(System.out::println);
         
+        //ordena empleados en forma decendente por apellido, luego por nombre
+        System.out.printf("%nEmpleados en orden descendente por apellido y luego por nombre:%n");
         
+        lista.stream()
+             .sorted(apellidoNombre.reversed())
+             .forEach(System.out::println);
+        
+    
        
         
             
