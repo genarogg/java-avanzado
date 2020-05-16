@@ -54,6 +54,13 @@ public class Empleados {
     public String obtenerNombre(){
         return String.format("%s %s", getPrimerNombre(), getApellidoPaterno());
     }
-   
+    @Override
+    public String toString(){
+        return String.format("%-10s %-10s %10.2f %s", 
+                                                      getPrimerNombre(),
+                                                      getApellidoPaterno(),
+                                                      getSalario(),
+                                                      getDepartamento());
+    }
     
 }
