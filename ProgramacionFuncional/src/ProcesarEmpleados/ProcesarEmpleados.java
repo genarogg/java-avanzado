@@ -52,6 +52,13 @@ public class ProcesarEmpleados {
         lista.stream().filter(cuatroASeisMil).sorted(Comparator.comparing(empleado -> empleado.getSalario()))
                 .forEach(System.out:: println);
         
+        //Muestra el primer empleado con salarios en rango de $4000 a $6000
+        System.out.printf("%nPrimer empleado que gana $4000-$6000:%n%s%n",
+                            lista.stream()
+                            .filter(cuatroASeisMil)
+                            .findFirst()
+                            .get());
+        
         
       
        
