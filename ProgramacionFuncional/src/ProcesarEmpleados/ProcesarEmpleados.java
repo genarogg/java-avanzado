@@ -76,7 +76,15 @@ public class ProcesarEmpleados {
              .sorted(apellidoNombre.reversed())
              .forEach(System.out::println);
         
-    
+        //muestra apellidos  de empleados unicos ordenados
+        System.out.printf("%nApellidos de empleados unicos:%n");
+        lista.stream()
+                   .map(Empleados :: getApellidoPaterno)
+                   .distinct()
+                   .sorted()
+                   .forEach(System.out::println);
+        
+        
        
         
             
