@@ -63,7 +63,13 @@ public class ProcesarEmpleados {
         Function <Empleados, String> porPrimerNombre = Empleados::getPrimerNombre;
         Function <Empleados, String> porApellido = Empleados::getApellidoPaterno;
         
-      
+        //Comparartor para comparar empleados por primer nombre y luego por apellidoPaterno
+        Comparator<Empleados> apellidoNombre = Comparator.comparing(porApellido).thenComparing(porPrimerNombre);
+            lista.stream()
+             .sorted(apellidoNombre)
+             .forEach(System.out::println);
+        
+        
        
         
             
