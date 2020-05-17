@@ -125,7 +125,14 @@ public class ProcesarEmpleados {
                 
             );
         
-      
+        //calcula la suma de los salarios de los empleados con metodo reduce de stream
+        System.out.printf("Suma de los salarios de los empleados(metodo el metodo reduce): %.2f%n",
+                            lista.stream()
+                                    .mapToDouble(Empleados:: getSalario)
+                                    .reduce(0, (valor1, valor2) -> valor1 + valor2)
+                );
+        
+        /
     }
             
     
