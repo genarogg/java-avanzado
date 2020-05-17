@@ -97,7 +97,15 @@ public class ProcesarEmpleados {
                 lista.stream()
                         .collect(Collectors.groupingBy(Empleados :: getDepartamento));
         
-       
+        agrupadoPorDepartamento.forEach(
+                (departamento, empleadosEnDepartamento) ->{
+                System.out.println(departamento);
+                empleadosEnDepartamento.forEach(
+                empleado -> System.out.printf("   %s%n", empleado)
+                );
+            }
+        );
+        
         
             
     
