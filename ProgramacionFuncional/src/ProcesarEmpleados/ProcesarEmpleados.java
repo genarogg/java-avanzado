@@ -116,7 +116,16 @@ public class ProcesarEmpleados {
         conteoEmpleadosPorDepartamento.forEach(
             (departamento, conteo) -> System.out.printf("%s tiene %d empleado(s)%n", departamento, conteo)
         );
-       
+        
+        //suma de salarios de empleados con el metodo sum de DoubleStream
+        System.out.printf("%nSuma de los salarios de los empleados (mediante el metodo sum): %.2f%n",
+                            lista.stream()
+                                    .mapToDouble(Empleados::getSalario)
+                                    .sum()
+                
+            );
+        
+      
     }
             
     
