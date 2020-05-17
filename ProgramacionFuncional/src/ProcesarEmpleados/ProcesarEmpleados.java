@@ -132,7 +132,13 @@ public class ProcesarEmpleados {
                                     .reduce(0, (valor1, valor2) -> valor1 + valor2)
                 );
         
-        /
+        //promedio de salarios de empleados con el metodo con el metodo average de DoubleStream
+        System.out.printf("Promedio de salarios de los empleados: %.2f%n",
+                            lista.stream()
+                                    .mapToDouble(Empleados::getSalario)
+                                    .average()
+                                    .getAsDouble()
+                );
     }
             
     
