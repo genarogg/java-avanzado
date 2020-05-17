@@ -106,7 +106,18 @@ public class ProcesarEmpleados {
             }
         );
         
+        //Cuenta el numero de empleados en cada departamento
+        System.out.printf("%nConteo de empleados por departamento:%n");
+        Map<String, Long> conteoEmpleadosPorDepartamento =
+                lista.stream()
+                        .collect(Collectors.groupingBy(Empleados::getDepartamento, TreeMap::new, 
+                                                        Collectors.counting()));
         
+        conteoEmpleadosPorDepartamento.forEach(
+            (departamento, conteo) -> System.out.printf("%s tiene %d empleado(s)%n", departamento, conteo)
+        );
+       
+    }
             
     
 }
