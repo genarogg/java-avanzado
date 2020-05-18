@@ -31,6 +31,23 @@ public class Main {
         
     }
     
-   
+    private static void testPopDouble(Stack<Double> stack){
+        try{
+            System.out.printf("%nAccion de pop en el stack de doubles%n");
+            double popValue; //almacena el elemento eliminado
+            
+            while(true){
+                popValue = stack.pop(); //pop sobre la pila double
+                System.out.printf("%.1f ", popValue);
+            }
+            
+        }
+        catch(EmptyStackException e){
+            System.err.println();
+            e.printStackTrace();
+        }
+    }
+    
+  
     
 }
