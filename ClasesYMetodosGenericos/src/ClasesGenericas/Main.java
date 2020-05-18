@@ -20,6 +20,17 @@ public class Main {
         testPopInteger(integerStack);
     }
     
-  
+    //test del metodo puhk con valores de tipo Double 
+    private static void testPushDouble(Stack<Double> stack, double[] valores){
+        System.out.printf("%nHacer push a los elementos dentro de la pila double%n");
+        
+        for(double valor : valores){
+            System.out.printf("%.1f ", valor);
+            stack.push(valor);
+        }
+        
+    }
+    
+   
     
 }
