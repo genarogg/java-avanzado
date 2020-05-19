@@ -19,5 +19,17 @@ public class Stack <T> {
         this(10);
     }
     
+    //empujar elementos dentro de la pila
+    public void push ( T valorPush){
+        elementos.add(valorPush);
+    }
+    
+    //public 
+    public T pop(){
+        if(elementos.isEmpty()){
+            throw new EmptyStackException();
+        }
+        return elementos.remove(elementos.size() - 1);
+    }
     
 }
