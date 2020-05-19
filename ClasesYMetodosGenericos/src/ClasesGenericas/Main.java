@@ -48,6 +48,16 @@ public class Main {
         }
     }
     
-  
+    private static void testPushInteger(Stack<Integer> stack, int[] valores){
+        System.out.printf("%nHacer push a los elementos dentro de la pila integer%n");
+        
+        for(int valor : valores){
+            System.out.printf("%d ", valor);
+            stack.push(valor);
+        }
+        
+    }
+    
+   
     
 }
