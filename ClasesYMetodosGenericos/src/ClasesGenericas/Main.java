@@ -58,6 +58,23 @@ public class Main {
         
     }
     
-   
+    private static void  testPopInteger (Stack<Integer> stack){
+        
+        try{
+            System.out.printf("%nPush a elementos dentro del stack de integers%n");
+
+            int popValue; //almacena el elemento eliminado
+            
+            while(true){
+                popValue = stack.pop(); //pop sobre la pila integer
+                System.out.printf("%d %n", popValue);
+            }
+            
+        }
+        catch(EmptyStackException e){
+            System.err.println();
+            e.printStackTrace();
+        }
+    }
     
 }
