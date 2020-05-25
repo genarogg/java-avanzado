@@ -20,5 +20,10 @@ public class BlockingBuffer implements Buffer{
                             "Elementos en el buffer: ", buffer.size());
     }
 
-   
+    @Override
+    public int blockingGet() throws InterruptedException {
+        int readValue = buffer.take();
+        System.out.printf("%s %2d\t%s%d%n", "esl consumer lee", readValue, "Elementos en el buffer", buffer.size());
+        return readValue;
+    }
 }
