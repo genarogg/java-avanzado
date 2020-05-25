@@ -1,6 +1,4 @@
-public class Producer {
-    
-}package BlockingQueue;
+package BlockingQueue;
 
 import java.security.SecureRandom;
 
