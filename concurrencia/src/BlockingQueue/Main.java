@@ -18,9 +18,9 @@ public class Main {
         ExecutorService e = Executors.newCachedThreadPool();
         
         Buffer b = new BlockingBuffer();
-        
-        e.execute(new Producer(b));
-        e.execute(new Consumer(b));
+        /* Da error en vs code, pero funcionan bien */
+        /* e.execute(new Producer(b));
+        e.execute(new Consumer(b)); */
         
         e.shutdown();
         e.awaitTermination(1, TimeUnit.MINUTES);
