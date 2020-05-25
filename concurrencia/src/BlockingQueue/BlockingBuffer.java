@@ -13,5 +13,12 @@ public class BlockingBuffer implements Buffer{
         buffer = new ArrayBlockingQueue<Integer>(1);
     }
 
+    @Override
+    public void blockingPut(int value) throws InterruptedException {
+        buffer.put(value);
+        System.out.printf("%s%2d\t%s%d%n", "El producto escribe", value,
+                            "Elementos en el buffer: ", buffer.size());
+    }
+
    
 }
