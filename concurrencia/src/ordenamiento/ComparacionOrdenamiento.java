@@ -23,6 +23,15 @@ public class ComparacionOrdenamiento {
         Arrays.sort(array1);
         Instant sortEnd = Instant.now();
         
+        long sortTime = Duration.between(sortStart, sortEnd).toMillis();
+        System.out.printf("Total de milisegundos: %d%n%n", sortTime);
+        
+        System.out.println("Comienza ordenamiento paralelo");
+        Instant parallelSortStart = Instant.now();
+        Arrays.parallelSort(array2);
+        Instant parallelSortEnd = Instant.now();
+        
+        
         
         
     
