@@ -18,6 +18,16 @@ public class ImpresorDeTareas implements  Runnable{
         SLEEPTIME = generador.nextInt(5000);
     }
     
-   
+    @Override
+    public void run() {
+        try {
+            System.out.printf("%s se fue a dormir %d milisegundos%n%n", this.NOMBRETAREA, SLEEPTIME);
+            Thread.sleep(SLEEPTIME);
+        }
+        catch (InterruptedException e) {
+            e.printStackTrace();
+            Thread.currentThread().interrupt();
+        }
+    }
     
 }
