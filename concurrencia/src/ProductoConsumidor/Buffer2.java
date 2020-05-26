@@ -23,5 +23,18 @@ public class Buffer2 {
         return contenido;
     }
     
-   
+    public synchronized void poner(char c){
+        while(disponible){
+            try {
+                wait();
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+        
+        contenido = c;
+        disponible = true;
+        notify();
+    }
 }
