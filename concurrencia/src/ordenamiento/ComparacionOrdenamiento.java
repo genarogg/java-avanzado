@@ -31,6 +31,9 @@ public class ComparacionOrdenamiento {
         Arrays.parallelSort(array2);
         Instant parallelSortEnd = Instant.now();
         
+        //Tiempo de ordenamiento del array2 con el metodo paralleloSort de Arrays
+        long parallelSortTime = Duration.between(parallelSortStart, parallelSortEnd).toMillis();
+        System.out.printf("Total de milisegundos: %d%n%n", parallelSortTime);
         
         
         
