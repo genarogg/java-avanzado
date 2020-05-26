@@ -36,7 +36,10 @@ public class ComparacionOrdenamiento {
         System.out.printf("Total de milisegundos: %d%n%n", parallelSortTime);
         
         
+        //desplegar el porcentaje de diferencia.
+        String porcentaje = NumberFormat.getPercentInstance().format((double) sortTime / parallelSortTime);
         
+        System.out.printf("%nSort toma %s mas tiempo que parallelSort%n", porcentaje);
     
     }   
             
