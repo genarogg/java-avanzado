@@ -56,7 +56,14 @@ public class TestStreams {
                 + " que se llevó el stream secuencial: %d%n%n", 
                 Duration.between(sequentialStart, sequentialEnd).toMillis());
         
+        //tiempo de suma con stream paralelo
+        LongStream stream2 = Arrays.stream(values).parallel();
+        System.out.println("Calculando estadísticas sobre stream paralelo");
+        Instant parallelStart = Instant.now();
+        LongSummaryStatistics results2 = stream2.summaryStatistics();
+        Instant parallelEnd = Instant.now();
         
+       
     }
 
     
