@@ -43,7 +43,14 @@ public class TestStreams {
                 + "que se llevó el cáldulo por separado: %,d%n", 
                 Duration.between(separateStart, separateEnd).toMillis());
         
-    
+        //Tiempo de la operación sum realizada con un stream secuencial.
+        LongStream stream1 = Arrays.stream(values);
+        System.out.println("Calculando estadísticas sobre un stream secuencial");
+        Instant sequentialStart = Instant.now();
+        LongSummaryStatistics results1 = stream1.summaryStatistics();
+        Instant sequentialEnd = Instant.now();
+        
+        
     }
 
     
