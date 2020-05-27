@@ -32,7 +32,18 @@ public class TestStreams {
         double average = Arrays.stream(values).average().getAsDouble();
         Instant separateEnd = Instant.now();
         
+        //Desplegar resultados
+        System.out.println("Resultados de tiempo de cálculos por separado");
+        System.out.printf("  count: %,d%n", count);
+        System.out.printf("    sum: %,d%n", sum);
+        System.out.printf("    min: %,d%n", min);
+        System.out.printf("    max: %,d%n", max);
+        System.out.printf("average: %,f%n", average);
+        System.out.printf("Total de tiempo en milisegundos "
+                + "que se llevó el cáldulo por separado: %,d%n", 
+                Duration.between(separateStart, separateEnd).toMillis());
         
+    
     }
 
     
