@@ -50,6 +50,12 @@ public class TestStreams {
         LongSummaryStatistics results1 = stream1.summaryStatistics();
         Instant sequentialEnd = Instant.now();
         
+        //desplegar resultados
+        desplegarEstadisticas(results1);
+        System.out.printf("Total de tiempo en milisegundos"
+                + " que se llevó el stream secuencial: %d%n%n", 
+                Duration.between(sequentialStart, sequentialEnd).toMillis());
+        
         
     }
 
