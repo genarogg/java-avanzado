@@ -31,5 +31,19 @@ public class Sucursal implements Runnable {
         }
     }
     
-  
+    private synchronized void venderProducto(int cantidadVendida){
+        //synchronized(this){} -> Para un solo Bloque
+        if(prod.getExistencia() >= cantidadVendida){
+            System.out.printf("La existencia del producto %s es %d%n",
+                                prod.getNombreProd(), prod.getExistencia());
+            
+            System.out.printf("El cajero que realiza la centa es: %s%n",
+                                Thread.currentThread().getName());
+            
+            prod.venderProducto(cantidadVendida);
+            
+            System.out.println("Venta realizada. Nueva existencia: " + prod.getExistencia());
+        }
+        
+    }
 }
