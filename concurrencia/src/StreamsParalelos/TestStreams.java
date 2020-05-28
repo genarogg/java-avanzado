@@ -63,7 +63,11 @@ public class TestStreams {
         LongSummaryStatistics results2 = stream2.summaryStatistics();
         Instant parallelEnd = Instant.now();
         
-       
+        //desplegar resultados
+        desplegarEstadisticas(results2);
+        System.out.printf("Total de tiempo en milisegundos que se llevó"
+                + "el stream paralelo: %d%n%n", 
+                Duration.between(parallelStart, parallelEnd).toMillis());
     }
 
     
