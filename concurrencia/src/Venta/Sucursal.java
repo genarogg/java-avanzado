@@ -11,6 +11,25 @@ public class Sucursal implements Runnable {
         this.prod = prod;
     }
     
-
+    
+    @Override
+    public void run() {
+        for (int i = 0; i < 5; i++) {
+            
+            try {
+                venderProducto(2);
+                Thread.sleep(500);
+                
+                if(prod.getExistencia() < 0){
+                    System.out.println("Existen inconsistencias en la existencia del producto");
+                }
+            }
+            catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            
+        }
+    }
+    
   
 }
