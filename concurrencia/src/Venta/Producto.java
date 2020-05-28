@@ -13,5 +13,15 @@ public class Producto {
         this.nombreProd = nombreProd;
     }
 
-   
+    public int getExistencia() {
+        return existencia;
+    }
+
+    public String getNombreProd() {
+        return nombreProd;
+    }
+    
+    public void venderProducto(int cantidadVendida){
+        existencia -= cantidadVendida;
+    }
 }
