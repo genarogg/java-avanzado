@@ -70,5 +70,13 @@ public class TestStreams {
                 Duration.between(parallelStart, parallelEnd).toMillis());
     }
 
-    
+    //Despliega los valores de LongSummaryStatistics
+    private static void desplegarEstadisticas(LongSummaryStatistics estadisticas) {
+        System.out.println("Estadísticas");
+        System.out.printf("    count: %,d%n", estadisticas.getCount());
+        System.out.printf("      sum: %,d%n", estadisticas.getSum());
+        System.out.printf("      min: %,d%n", estadisticas.getMin());
+        System.out.printf("      max: %,d%n", estadisticas.getMax());
+        System.out.printf("  average: %f%n", estadisticas.getAverage());
+    }
 }
